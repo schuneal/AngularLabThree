@@ -1,0 +1,16 @@
+<h3>{{title}}</h3>
+<ul>
+    <li *ngFor="let data of myFarmsData">
+        <a [routerLink]="['farm/' , data._id]"> {{data.farm}} </a>
+    </li>
+
+    <div *ngIf="mySelectedData != null">
+        <h2>Details</h2>
+        <br/>
+        <ul>
+            <li>  Id : {{mySelectedData._id}}</li>
+            <li>  Name : {{mySelectedData.farm}}</li>
+            <li>  Produce : {{mySelectedData.produce}}</li>
+        </ul>
+    </div>
+</ul>
